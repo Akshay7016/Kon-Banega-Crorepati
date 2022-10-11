@@ -11,11 +11,15 @@ import './App.css'
 
 const App = () => {
   const [username, setUsername] = useState(null)
-  const [questionNumber, setQuestionNumber] = useState(1);
+  const [questionNumber, setQuestionNumber] = useState(14);
   const [stop, setStop] = useState(false);
   const [earned, setEarned] = useState("$ 0")
 
   useEffect(() => {
+    if (questionNumber === 16) {
+      setEarned("$ 1000000");
+      setStop(true);
+    }
     questionNumber > 1 && setEarned(moneyPyramid.find((item) => item.id === questionNumber - 1).amount)
   }, [questionNumber])
 
