@@ -11,7 +11,7 @@ import './App.css'
 
 const App = () => {
   const [username, setUsername] = useState(null)
-  const [questionNumber, setQuestionNumber] = useState(14);
+  const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
   const [earned, setEarned] = useState("$ 0")
 
